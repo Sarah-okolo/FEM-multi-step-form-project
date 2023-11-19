@@ -15,6 +15,7 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+.prettierignore
 .idea
 .DS_Store
 *.suo
@@ -22,3 +23,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# FEM Design files 
+*.sketch
+*.fig
+*.xd
