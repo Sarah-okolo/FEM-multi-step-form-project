@@ -1,0 +1,17 @@
+@import "../_variables.scss";
+
+#nav-sidebar {
+  @include bg-image("../images/bg-sidebar-desktop.svg");
+  width: 30%;
+  height: 100%;
+  border-radius: $bd-radius;
+}
+
+@media screen and (max-width: 450px) {
+  #nav-sidebar{
+  @include bg-image("../images/bg-sidebar-mobile.svg");
+    width: 100%;
+    height: 30%;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../variables';
+
+#bottom-nav {
+  height: auto;
+  margin: 10px 0px;
+  padding: 15px 0px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+#go-back-btn {
+  color: $Cool-gray;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: .8em;
+}
+
+#go-back-btn:hover {
+  color: $Marine-blue;
+}
+
+#next-btn{
+  @include square-btn($Marine-blue);
+}
+
+#next-btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 450px) {
+  #bottom-nav {
+    margin: 0;
+    padding: 15px;
+    box-shadow: $bx-shadow;
+  }
+}

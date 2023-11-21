@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+// Color Variables
+// Primary
+$Marine-blue: hsl(213, 96%, 18%);
+$Purplish-blue: hsl(243, 100%, 62%);
+$Pastel-blue: hsl(228, 100%, 84%);
+$Light-blue: hsl(206, 94%, 87%);
+$Strawberry-red: hsl(354, 84%, 57%);
+
+// Neutral
+$Cool-gray: hsl(231, 11%, 63%);
+$Light-gray: hsl(229, 24%, 87%);
+$Magnolia: hsl(217, 100%, 97%);
+$Alabaster: hsl(231, 100%, 99%);
+$White: hsl(0, 0%, 100%);
+
+// Paragraph font
+$F-size: 16px;
+$F-family:'Poppins', sans-serif;
+$F-Weights: 400, 500, 700;
+
+// Components styles
+$bg-color: $Magnolia;
+$btns-bg-color: $Marine-blue;
+$content-bg-color: $White;
+$bx-shadow: 1px 1px 20px $Light-gray;
+$bd-radius: 10px;
+
+// @mixins consistent styles
+@mixin bg-image($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin square-btn($color){
+  background-color: $color;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid $color;
+  font-size: .8em;
+}
+
+@mixin round-btn($color){
+  background-color: $color;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+  border: 1px solid $White;
+  font-size: .8em;
+}
+
+// Desktop: 1440px >
+:root {
+  font-family: $F-family;
+  font-size: $F-size;
+  font-synthesis: none;
+  color-scheme: light dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
