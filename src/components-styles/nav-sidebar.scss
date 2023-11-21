@@ -9,35 +9,49 @@
 
 #nav-links-container {
   margin: 30px;
+  position: relative;
 }
 
 .link-wrapper {
   display: flex;
   align-items: center;
   margin: 12px 0;
+  position: relative;
+  // z-index: 20;
 }
 
 .round-nav-btn {
   @include round-btn(transparent);
   margin-right: 10px;
-}
+  text-decoration: none;
 
-.link-wrapper:nth-child(1) .round-nav-btn {
-  background-color: $Light-blue;
-  color: $Marine-blue;
-  border: none;
+  &:active{
+    background-color: $Light-blue;
+    color: $Marine-blue;
+    border: none;
+  }
 }
 
 .what-section {
-  font-size: .8em;
+  font-size: .75em;
 }
 
 .step-faded-txt {
-  color: $Cool-gray;
   font-size: .9em;
+  color: $Cool-gray;
 }
 
 
+// .progress-line {
+//   background-color: $Light-blue;
+//   width: 2px;
+//   height: 75%;
+//   position: absolute;
+//   border-radius: 20px;
+//   top: 17px;
+//   left: 13.2px;
+//   z-index: -2;
+// }
 @media screen and (max-width: 450px) {
   #nav-sidebar{
   @include bg-image("../images/bg-sidebar-mobile.svg");

@@ -26,6 +26,8 @@ $btns-bg-color: $Marine-blue;
 $content-bg-color: $White;
 $bx-shadow: 1px 1px 20px $Light-gray;
 $bd-radius: 10px;
+$small-txts: .75em;
+$p-margin: 5px 0 25px;
 
 // @mixins consistent styles
 @mixin bg-image($url) {
@@ -55,6 +57,25 @@ $bd-radius: 10px;
   place-items: center;
 }
 
+
+@mixin content-section-child {
+  width: 100%;
+  height: 100%;
+  border-radius: $bd-radius;
+  padding: 20px 0px;
+
+  p {
+    color: $Cool-gray;
+    font-size: $small-txts;
+  }
+}
+
+@mixin plans-container {
+  display: flex;
+  // border: 2px solid red;
+  justify-content: space-between;
+}
+
 // Desktop: 1440px >
 :root {
   font-family: $F-family;
@@ -71,4 +92,8 @@ $bd-radius: 10px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.instruction {
+  margin: $p-margin;
 }

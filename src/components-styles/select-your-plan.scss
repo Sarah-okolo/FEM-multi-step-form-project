@@ -1,0 +1,52 @@
+@import '../variables';
+
+#select-your-plan {
+  @include content-section-child;
+  // display: none;
+}
+
+#monthly-plans-container {
+  @include plans-container;
+}
+
+.plan {
+  border: 1px solid $Cool-gray;
+  border-radius: $bd-radius;
+  padding: 15px 10px;
+  width: 30%;
+  height: 160px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &:hover {
+    border: 1px solid $Marine-blue;
+  }
+  &:nth-child(1) {
+    background-color: $Magnolia;
+    border: 1px solid $Marine-blue;
+  }
+
+.plan-logo {
+  width: 40px;
+  object-fit: contain;
+}
+
+}
+
+#month-year-select {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $Magnolia;
+}
+
+#month-year-toggle-btn {
+  width: 20px;
+  height: 10px;
+  background-color: $Marine-blue;
+}

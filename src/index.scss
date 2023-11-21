@@ -33,7 +33,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  color: $Marine-blue
 }
 
 #content-section {
@@ -41,7 +40,16 @@ body {
   height: 85%;
   border-radius: $bd-radius;
   background-color: $White;
-  padding: 15px;
+  color: $Marine-blue;
+  margin: 15px;
+  // border: 2px solid red;
+  overflow-y: auto;
+  transition: 1s;
+  // scroll-behavior: smooth;
+}
+
+#content-section::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar width */
 }
 
 //mobile screens
@@ -74,7 +82,6 @@ body {
     z-index: 5;
     overflow-y: auto;
     box-shadow: $bx-shadow;
-
   }
 }
 

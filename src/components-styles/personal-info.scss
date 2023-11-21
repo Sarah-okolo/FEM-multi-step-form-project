@@ -1,8 +1,30 @@
 @import '../variables';
 
-#personal-info-section {
-  width: 100%;
-  height: 100%;
-  border-radius: $bd-radius;
-  padding: 20px 0px;
+#personal-info {
+  @include content-section-child;
+  // display: none;
+}
+
+#personal-info-form {
+  font-size: .85em;
+
+  input {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 5px 0 15px;
+    font-size: .9em;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid $Cool-gray;
+    outline: none;
+    color: $Marine-blue;
+    cursor: pointer;
+
+    &:hover {
+    border: 1px solid $Marine-blue;
+    }
+    &:focus {
+      border: 1px solid $Marine-blue;
+    }
+  }
 }
