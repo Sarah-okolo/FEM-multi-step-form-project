@@ -4,7 +4,9 @@ function NavSidebar() {
   return ( 
     <>
       <nav id="nav-sidebar">
-        
+        <div>
+          
+        </div>
       </nav>
     </>
    );
