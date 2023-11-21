@@ -1,11 +1,42 @@
 @import "../_variables.scss";
 
 #nav-sidebar {
-  @include bg-image("../images/bg-sidebar-desktop.svg");
+  @include bg-image("/images/bg-sidebar-desktop.svg");
   width: 30%;
   height: 100%;
   border-radius: $bd-radius;
 }
+
+#nav-links-container {
+  margin: 30px;
+}
+
+.link-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.round-nav-btn {
+  @include round-btn(transparent);
+  margin-right: 10px;
+}
+
+.link-wrapper:nth-child(1) .round-nav-btn {
+  background-color: $Light-blue;
+  color: $Marine-blue;
+  border: none;
+}
+
+.what-section {
+  font-size: .8em;
+}
+
+.step-faded-txt {
+  color: $Cool-gray;
+  font-size: .9em;
+}
+
 
 @media screen and (max-width: 450px) {
   #nav-sidebar{

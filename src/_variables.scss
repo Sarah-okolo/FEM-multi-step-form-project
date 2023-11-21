@@ -46,10 +46,13 @@ $bd-radius: 10px;
 @mixin round-btn($color){
   background-color: $color;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 50px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
   border: 1px solid $White;
   font-size: .8em;
+  display: grid;
+  place-items: center;
 }
 
 // Desktop: 1440px >
