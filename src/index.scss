@@ -6,6 +6,7 @@
 
 body {
   background-color: $bg-color;
+  position: relative;
 }
 
 #root {
@@ -42,10 +43,9 @@ body {
   background-color: $White;
   color: $Marine-blue;
   margin: 15px;
-  // border: 2px solid red;
-  overflow-y: auto;
+  overflow-y: hidden;
   transition: 1s;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 #content-section::-webkit-scrollbar {
@@ -76,15 +76,27 @@ body {
 
   #content-section {
     position: relative;
-    top: -70px;
+    top: -60px;
     width: 90%;
+    height: auto;
     margin: 0 auto;
+    // overflow: visible;
     z-index: 5;
-    overflow-y: auto;
+    padding: 20px;
     box-shadow: $bx-shadow;
   }
 }
 
+.attribution {
+  position: absolute;
+  bottom: 0;
+  padding: 30px 10px 5px;
+  color: $Cool-gray;
+}
+
+.attribution > a:hover {
+  color: $Marine-blue;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

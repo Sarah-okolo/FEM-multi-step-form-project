@@ -22,7 +22,7 @@ function NavSidebar() {
           </div>
          
           <div className='link-wrapper'>
-            <div className="round-nav-btn">4</div>
+            <a href="#finishing-up" className="round-nav-btn">4</a>
             <p className="what-section"><span className='step-faded-txt'>Step 4</span><br/>SUMMARY</p>
           </div>
             

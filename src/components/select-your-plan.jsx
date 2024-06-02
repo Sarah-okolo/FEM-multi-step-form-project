@@ -1,13 +1,19 @@
 import '../components-styles/select-your-plan.scss'
 
 function SelectYourPlan() {
-  return ( 
+  const slider = document.getElementById('white-slide');
+
+  const toggleMonthYear = () => {
+    slider.classList.toggle("slide");
+  };
+
+  return (
     <>
       <div id='select-your-plan'>
         <h2>Select your plan</h2>
         <p className='instruction'>You have the option of monthly or yearly billing.</p>       
 
-        <div id='monthly-plans-container'>
+        <div id='plans-container'>
           <div className="plan">
             <img src='/images/icon-arcade.svg' alt='arcade plan logo' className='plan-logo'/>
             <div>
@@ -35,7 +41,7 @@ function SelectYourPlan() {
        
         <div id='month-year-select'>
           <p>Monthly</p>
-          <div id="month-year-toggle-btn"></div>
+          <div id="month-year-toggle-btn" onClick={toggleMonthYear}><span id='white-slide'></span></div>
           <p>Yearly</p>
         </div>
       </div>

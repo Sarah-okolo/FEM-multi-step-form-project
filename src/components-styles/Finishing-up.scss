@@ -1,0 +1,59 @@
+@import '../variables';
+
+#finishing-up {
+  @include content-section-child;
+  // display: none;
+}
+
+#selected-plan-price-container {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: $Alabaster;
+}
+
+#change-plan {
+    text-decoration: underline;
+    color: $Cool-gray;
+    font-size: .8em;
+}
+
+#change-plan:hover {
+    color: $Marine-blue;
+}
+
+.extra-prices{
+    padding-top: 10px;
+}
+
+.extra-prices > span {
+    font-size: 11px;
+}
+
+.amounts {
+    color: $Marine-blue;
+}
+
+.selected-plan-price {
+    font-weight: 900;
+    position: relative;
+    top: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#selected-plan {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $Cool-gray;
+}
+
+.total-amount {
+    padding: 20px;
+}
+
+#total-selected-plan-amount {
+    color: $Purplish-blue;
+    font-weight: 900;
+}

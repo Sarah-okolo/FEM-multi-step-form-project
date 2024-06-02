@@ -5,7 +5,7 @@
   // display: none;
 }
 
-#monthly-plans-container {
+#plans-container {
   @include plans-container;
 }
 
@@ -14,7 +14,7 @@
   border-radius: $bd-radius;
   padding: 15px 10px;
   width: 30%;
-  height: 160px;
+  height: 130px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,46 @@
 }
 
 #month-year-toggle-btn {
-  width: 20px;
-  height: 10px;
+  position: relative;
+  width: 30px;
+  height: 15px;
   background-color: $Marine-blue;
+  border-radius: 20px;
+  transition: 1s;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#white-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: $White;
+  border-radius: 50%;
+  transform: scale(0.7);
+}
+
+.slide {
+  transform: translate(125%);
+}
+
+@media screen and (max-width: 450px) {
+  #plans-container {
+    flex-direction: column;
+    gap: 15px;
+  } 
+
+  .plan {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-start;
+    padding: 10px;
+  }
 }

@@ -1,0 +1,16 @@
+@import '../variables';
+
+#thank-you {
+    @include content-section-child;
+
+    display: grid;
+    place-items: center;
+  }
+
+#wrapper {
+    display: grid;
+    place-items: center;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+}
