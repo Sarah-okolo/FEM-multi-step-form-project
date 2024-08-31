@@ -25,11 +25,15 @@
   color: $Marine-blue;
 }
 
-#next-btn{
+.next-btn{
   @include square-btn($Marine-blue);
 }
 
-#next-btn:hover {
+.confirm {
+  @include square-btn($Purplish-blue);
+}
+
+.next-btn:hover {
   opacity: 0.8;
 }
 

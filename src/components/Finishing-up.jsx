@@ -1,6 +1,29 @@
 import "../components-styles/Finishing-up.scss";
+import { useContext, useEffect, useState } from "react";
+import { extractNumericValues } from "./utility_functions";
+import { SLAddOnsContext, SLPlanContext, MOYContext } from "./contexts";
+
 
 function FinishingUp() {
+  const { selectedAddOns } = useContext(SLAddOnsContext);
+  const { selectedPlanName, selectedPlanPrice } = useContext(SLPlanContext);
+  const { isMonthOrYear } = useContext(MOYContext);
+  const [rerender, triggerRerender] = useState(false);
+  let totalPrice;
+
+  // Calculates the total plan and addOn price
+  if (selectedPlanPrice != "") {
+    const addOnsPrice = selectedAddOns.map((item) => extractNumericValues(item.children[1].innerText));
+    let totalAddOnPrice = 0;
+    addOnsPrice.forEach((num) => totalAddOnPrice += num );
+    totalPrice = totalAddOnPrice + extractNumericValues(selectedPlanPrice)
+  }
+
+  // Manually triggers a rerender because the DOM is not updating on time.
+  useEffect(() => {
+    triggerRerender(prev => !prev);
+  }, [selectedAddOns])
+
   return (
     <>
       <div id="finishing-up">
@@ -13,31 +36,30 @@ function FinishingUp() {
           <div className="flex" id="selected-plan">
             <div>
               <h3>
-                Arcade(<span>Monthly</span>)
+                {selectedPlanName} (<span>{isMonthOrYear == "mo" ? "Yearly" : "Monthly"}</span>)
               </h3>
               <a href="#select-your-plan" id="change-plan">
                 Change
               </a>
             </div>
-            <span className="amounts selected-plan-price">$9/mo</span>
+            <span className="amounts selected-plan-price">{selectedPlanPrice}</span>
           </div>
 
-          <div className="flex extra-prices">
-            <p>Online Service</p>
-            <span className="amounts online-service-price">+$1/mo</span>
-          </div>
-
-          <div className="flex extra-prices">
-            <p>Larger Storage</p>
-            <span className="amounts larger-storage-price">+$2/mo</span>
-          </div>
+          {/* Renders the list of user selected Add ons. */}
+          {selectedAddOns.map((item, index) => (
+            <div key={index} className="flex extra-prices">
+              <p>{item.querySelector("h3").innerText}</p>
+              <span className="amounts online-service-price">{item.children[1].innerText}</span>
+            </div>
+          ))}
         </div>
 
         <div className="flex total-amount">
-            <p>Total (per <span id="mo-yr">month</span>)</p>
-            <span id="total-selected-plan-amount">+$12/mo</span>
+          <p>
+            Total (per <span id="mo-yr">month</span>)
+          </p>
+          <span id="total-selected-plan-amount">{`+$${totalPrice}/${isMonthOrYear == "mo" ? "yr" : "mo"}`}</span>
         </div>
-       
       </div>
     </>
   );

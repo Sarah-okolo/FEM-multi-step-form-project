@@ -24,12 +24,12 @@
   @include round-btn(transparent);
   margin-right: 10px;
   text-decoration: none;
+}
 
-  &:active, &:hover{
-    background-color: $Light-blue;
-    color: $Marine-blue;
-    border: none;
-  }
+.active, .round-nav-btn:hover {
+  background-color: $Light-blue;
+  color: $Marine-blue;
+  border: none;
 }
 
 .what-section {

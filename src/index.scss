@@ -16,9 +16,11 @@ body {
 }
 
 #form-card {
-  width: 60%;
+  width: 70%;
+  max-width: 800px;
   background-color: $White;
   height:500px;
+  margin: 30px;
   padding: 15px;
   border-radius: $bd-radius;
   box-shadow: $bx-shadow;
@@ -50,6 +52,14 @@ body {
 
 #content-section::-webkit-scrollbar {
   width: 0; /* Hide scrollbar width */
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+.display {
+  display: block;
 }
 
 //mobile screens

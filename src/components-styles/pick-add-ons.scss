@@ -11,6 +11,7 @@
   padding: 12px;
   border: 1px solid $Cool-gray;
   border-radius: 5px;
+  cursor: pointer;
 
   &:hover {
     background-color: $Magnolia;
@@ -21,15 +22,19 @@
     height: 15px;
     border: 1px solid $Cool-gray;
     border-radius: 3px;
+    cursor: pointer;
     display: grid;
     place-items: center;
-    // background-color: $Purplish-blue;
   
    ion-icon {
     color: white;
-    display: none; //
+    display: block;
    }
   }
+}
+
+.checked {
+  background-color: $Purplish-blue;
 }
 
 .none {

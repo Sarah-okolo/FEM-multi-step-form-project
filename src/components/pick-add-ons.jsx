@@ -1,6 +1,31 @@
 import "../components-styles/pick-add-ons.scss";
+import { useContext, useEffect, useState } from "react";
+import AddOn from "./add-ons";
+import { calcYearlyFees } from "./utility_functions";
+import { MOYContext } from "./contexts";
+
 
 function PickAddOns() {
+  // use context from select-you-plan.jsx file.
+  const {isMonthOrYear} = useContext(MOYContext);
+  const [onlineServiceFee, setOnlineServiceFee] = useState("+$1/mo");
+  const [largerStorageFee, setLargerStorageFee] = useState("+$2/mo");
+  const [customizableProfileFee, setCustomizableProfileFee] = useState("+$2/mo");
+
+  useEffect(() => {
+    if (isMonthOrYear == "mo") {
+      // set fees to yearly
+      setOnlineServiceFee(`+$${calcYearlyFees(1)}/yr`);
+      setLargerStorageFee(`+$${calcYearlyFees(2)}/yr`);
+      setCustomizableProfileFee(`+$${calcYearlyFees(2)}/yr`);
+    } else {
+      // set fees to monthly
+      setOnlineServiceFee(`+$${1}/mo`);
+      setLargerStorageFee(`+$${2}/mo`);
+      setCustomizableProfileFee(`+$${2}/mo`);
+    }
+  }, [isMonthOrYear]);
+
   return (
     <>
       <div id="pick-add-ons">
@@ -9,53 +34,23 @@ function PickAddOns() {
           Add-ons help enhance your gaming experience.
         </p>
 
-        <div className="add-on one">
-          <div className="wrapper">
-            <label role="checkbox" tabIndex="0" aria-checked="false">
-              <ion-icon
-                name="checkmark-sharp"
-                className="checkmark1"
-              ></ion-icon>
-            </label>
-            <div className="add-on-info">
-              <h3>Online service</h3>
-              <p>Access to multiplayer games</p>
-            </div>
-          </div>
-          <span className="add-on-price">+$1/mo</span>
-        </div>
+        <AddOn
+          addOnH3="Online service"
+          addOnInfo="Access to multiplayer games"
+          addOnPrice={onlineServiceFee}
+        />
 
-        <div className="add-on">
-          <div className="wrapper">
-            <label role="checkbox" tabIndex="0" aria-checked="false">
-              <ion-icon
-                name="checkmark-sharp"
-                className="checkmark2"
-              ></ion-icon>
-            </label>
-            <div className="add-on-info">
-              <h3>Larger storage</h3>
-              <p>Extra 1TB of cloud save</p>
-            </div>
-          </div>
-          <span className="add-on-price">+$2/mo</span>
-        </div>
+        <AddOn
+          addOnH3="Larger storage"
+          addOnInfo="Extra 1TB of cloud save"
+          addOnPrice={largerStorageFee}
+        />
 
-        <div className="add-on">
-          <div className="wrapper">
-            <label role="checkbox" tabIndex="0" aria-checked="false">
-              <ion-icon
-                name="checkmark-sharp"
-                className="checkmark3"
-              ></ion-icon>
-            </label>
-            <div className="add-on-info">
-              <h3>Customizable Profile</h3>
-              <p>Custom theme on your profile</p>
-            </div>
-          </div>
-          <span className="add-on-price">+$2/mo</span>
-        </div>
+        <AddOn
+          addOnH3="Customizable Profile"
+          addOnInfo="Custom theme on your profile"
+          addOnPrice={customizableProfileFee}
+        />
       </div>
     </>
   );

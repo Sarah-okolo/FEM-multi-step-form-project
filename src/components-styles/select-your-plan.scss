@@ -14,18 +14,15 @@
   border-radius: $bd-radius;
   padding: 15px 10px;
   width: 30%;
-  height: 130px;
+  // height: 130px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  gap: 30px;
   justify-content: space-between;
   overflow: hidden;
 
   &:hover {
-    border: 1px solid $Marine-blue;
-  }
-  &:nth-child(1) {
-    background-color: $Magnolia;
     border: 1px solid $Marine-blue;
   }
 
@@ -34,13 +31,30 @@
   object-fit: contain;
 }
 
+div {
+  display: grid;
+  gap: 4px;
+}
+}
+
+.plan-focus {
+  background-color: $Magnolia;
+  border: 1px solid $Marine-blue;
+}
+
+.months-free-txt {
+  font-size: 10px;
+  color: $Marine-blue;
+  font-weight: bold;
+  margin-top: 5px;
+  display: none;
 }
 
 #month-year-select {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
-  padding: 10px;
+  padding: 10px 70px;
   border-radius: 5px;
   background-color: $Magnolia;
 }
@@ -58,7 +72,7 @@
   }
 }
 
-#white-slide {
+.white-slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -66,11 +80,12 @@
   width: 15px;
   background-color: $White;
   border-radius: 50%;
-  transform: scale(0.7);
+  transform: scale(0.7) translate(0%);
+  transition: .5s;
 }
 
 .slide {
-  transform: translate(125%);
+  transform: scale(0.7) translate(145%);
 }
 
 @media screen and (max-width: 450px) {

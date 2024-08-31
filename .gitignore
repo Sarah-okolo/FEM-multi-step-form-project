@@ -28,3 +28,6 @@ dist-ssr
 *.sketch
 *.fig
 *.xd
+
+# Test files
+.components/LearningReact.jsx
