@@ -23,7 +23,7 @@
   overflow: hidden;
 
   &:hover {
-    border: 1px solid $Marine-blue;
+    border: 1px solid $Purplish-blue;
   }
 
 .plan-logo {
@@ -38,8 +38,8 @@ div {
 }
 
 .plan-focus {
+  border: 1px solid $Purplish-blue;
   background-color: $Magnolia;
-  border: 1px solid $Marine-blue;
 }
 
 .months-free-txt {
