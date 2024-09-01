@@ -8,6 +8,8 @@ export const SLAddOnsContext = createContext();
 export const SLPlanContext = createContext();
 // context to store the number of the currently active nav link in the nav-links.jsx file.
 export const BtnLinkNumberContext = createContext();
+// context to store the validity state of the input fields in the form-field.jsx file.
+export const InputValidityContext = createContext();
 
 
 export const MyContextsProvider = ({ children }) => {
@@ -16,6 +18,8 @@ export const MyContextsProvider = ({ children }) => {
   const [selectedPlanName, updateSelectedPlanName] = useState(""); // For use in SLPlanContext
   const [selectedPlanPrice, updateSelectedPlanPrice] = useState(""); // For use in SLPlanContext
   const [btnLinkNumber, setBtnLinkNumber] = useState(1); // For use in BtnLinkNumberContext
+  const [isValid, setValidity] = useState(true);
+
 
 
   return (
@@ -23,7 +27,9 @@ export const MyContextsProvider = ({ children }) => {
       <SLAddOnsContext.Provider value={{ selectedAddOns, updateSelectedAddOns }}>
         <SLPlanContext.Provider value={{ selectedPlanName, updateSelectedPlanName, selectedPlanPrice, updateSelectedPlanPrice}}>
           <BtnLinkNumberContext.Provider value={{ btnLinkNumber, setBtnLinkNumber }}>
-            {children}
+            <InputValidityContext.Provider value={{ isValid, setValidity }}>
+             {children}
+            </InputValidityContext.Provider>
           </BtnLinkNumberContext.Provider>
         </SLPlanContext.Provider>
       </SLAddOnsContext.Provider>

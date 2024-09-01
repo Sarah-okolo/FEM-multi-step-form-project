@@ -13,7 +13,7 @@ function NavLinks(props) {
     if (btnLinkNumber <= 4 && btnLinkNumber > 0) {
       const linkBtns = document.querySelectorAll(".round-nav-btn");
       linkBtns.forEach((btn) => btn.classList.remove('active'));
-      linkBtns[btnLinkNumber - 1].classList.add('active');
+      linkBtns[btnLinkNumber-1].classList.add('active');
     }
   }, [btnLinkNumber])
 

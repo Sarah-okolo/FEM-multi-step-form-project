@@ -16,15 +16,25 @@
     border-radius: 6px;
     background-color: transparent;
     border: 1px solid $Cool-gray;
-    outline: none;
     color: $Marine-blue;
     cursor: pointer;
 
     &:hover {
-    border: 1px solid $Marine-blue;
+    border: 1px solid $Purplish-blue;
     }
     &:focus {
-      border: 1px solid $Marine-blue;
+      border: 1px solid $Purplish-blue;
     }
   }
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.required {
+  color: $Strawberry-red;
+  display: none;
+  font-size: 9px
 }
