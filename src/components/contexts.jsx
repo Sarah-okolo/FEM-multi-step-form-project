@@ -18,8 +18,7 @@ export const MyContextsProvider = ({ children }) => {
   const [selectedPlanName, updateSelectedPlanName] = useState(""); // For use in SLPlanContext
   const [selectedPlanPrice, updateSelectedPlanPrice] = useState(""); // For use in SLPlanContext
   const [btnLinkNumber, setBtnLinkNumber] = useState(1); // For use in BtnLinkNumberContext
-  const [isValid, setValidity] = useState(true);
-
+  const [isValid, setValidity] = useState(false); // For use in InputValidityContext
 
 
   return (

@@ -11,27 +11,24 @@ function FormField(props) {
   // Validates the input fields
   function validateInput() {
     const currentFieldWarningTxt = inputFieldRef.current.previousElementSibling.querySelector('.required');
-
     // display warning if input field is empty
     if (inputFieldRef.current.value == '') {
       inputFieldRef.current.style.border='1px solid red'
       currentFieldWarningTxt.style.display='block';
-    }
-    else {
+    }else {
       // remove warning if field is not empty
       inputFieldRef.current.style.border='1px solid hsl(243, 100%, 62%)';
       currentFieldWarningTxt.style.display='none';
     }
-
     // checks if the input field is not valid
     if (!inputFieldRef.current.checkValidity()){
       inputFieldRef.current.style.border='1.6px solid red';
       setValidity(false)
-    }
-    else{
+    }else{
       setValidity(true)
     }
   }
+
 
   return (
     <>

@@ -28,50 +28,37 @@ function BottomNav() {
 
   // VALIDATES AND SUBMITS FORM DATA
   function submitForm() {
-    // stores the user's form data
-    const userData = {
-      userName:'',
-      userEmail:'',
-      userPhoneN:'',
-      planName:'',
-      planPrice:'',
-      addons: []
-    };
-
     const inputFields = document.querySelectorAll('.input-field');
-    inputFields.forEach((field, index) => {
-      // checks if the input field is not empty
-      if (field.value !== ''){
-        // checks if the any input field value is invalid
-        if (!isValid) {
-          document.getElementById('personal-info').scrollIntoView();
-          setBtnLinkNumber(cur => cur = 1);
-        }
-        // ENSURES THE INPUT FIELD IS NOT EMPTY AND ITS VALUE IS VALID, THEN PROCEEDS TO UPDATE AND SUBMIT FORM DATA
-        else {
-          userData.userName = inputFields[0].value;
-          userData.userEmail = inputFields[1].value;
-          userData.userPhoneN = inputFields[2].value;
-          userData.planName = selectedPlanName;
-          userData.planPrice = selectedPlanPrice;
-          
-          selectedAddOns.forEach((addon) => {
-            let addOnName = addon.children[0].children[1].children[0].innerText
-            let addonPrice = addon.children[1].innerText;
-            userData.addons.push({addOnName, addonPrice})
-          })
+    const userData = {userName:'', userEmail:'', userPhoneN:'', planName:'', planPrice:'', addons: []}; // stores the user's form data
+    let formHasEmptyFields = Array.from(inputFields).some(field => field.value === ''); // finds empty input fields
 
-          console.log(userData)
+    // Checks if there are any empty input fields or if any field is valid or not
+    if (formHasEmptyFields || !isValid) {
+      // move back to the 1st section of the form if any of the input fields are empty
+      document.getElementById('personal-info').scrollIntoView();
+      setBtnLinkNumber(cur => cur = 1);
+      // display 'field required' warning for the specific empty field.
+      inputFields.forEach((field, index) => {
+        if (field.value == '') {
+          field.style.border='1px solid red';
+          document.querySelectorAll('.required')[index].style.display='block';
         }
-      }
-      else {
-        // Move back to the 1st section of the form if an input field is empty.
-        field.style.border='1px solid red';
-        document.querySelectorAll('.required')[index].style.display='block';
-        document.getElementById('personal-info').scrollIntoView();
-        setBtnLinkNumber(cur => cur = 1);
-      }
-    });
+      });
+    }
+    else {
+      // UPDATE AND SUBMIT FORM DATA IF NO INPUT FIELD IS EMPTY.
+      userData.userName = inputFields[0].value;
+      userData.userEmail = inputFields[1].value;
+      userData.userPhoneN = inputFields[2].value;
+      userData.planName = selectedPlanName;
+      userData.planPrice = selectedPlanPrice;
+      selectedAddOns.forEach((addon) => {
+        let addOnName = addon.children[0].children[1].children[0].innerText
+        let addonPrice = addon.children[1].innerText;
+        userData.addons.push({addOnName, addonPrice})
+      });
+      console.log(userData)
+    }
   }
 
   // Displays the next section in the form
