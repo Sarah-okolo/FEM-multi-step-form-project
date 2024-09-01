@@ -33,7 +33,7 @@ function FormField(props) {
   return (
     <>
     <label htmlFor={labelFor}>{labelText} <span className='required'>This field is required *</span></label>
-    <input type={inputType} ref={inputFieldRef} onInput={validateInput} className='input-field' name={inputName} placeholder={inputPlaceholder} pattern={inputRegexPattern} required/>
+    <input type={inputType} id={labelFor} ref={inputFieldRef} onInput={validateInput} className='input-field' name={inputName} placeholder={inputPlaceholder} pattern={inputRegexPattern} required autoComplete='on'/>
     </>
   )
 }

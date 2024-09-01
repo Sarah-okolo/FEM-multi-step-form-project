@@ -22,7 +22,7 @@ function AddOn(props) {
 
   function selectAddOn() {
     const addOnBox = document.querySelectorAll(".add-on");
-    const addOncheckBox = addOnFocus.current.querySelector('label');
+    const addOncheckBox = addOnFocus.current.querySelector('#checkbx');
 
     // sets the checked and focus state of each addOn box.
     addOnBox.forEach(() => {
@@ -49,9 +49,9 @@ function AddOn(props) {
     <>
       <div className="add-on" ref={addOnFocus} onClick={selectAddOn}>
         <div className="wrapper">
-          <label role="checkbox" tabIndex="0" aria-checked="false">
+          <div role="checkbox" id="checkbx" tabIndex="0" aria-checked="false">
             <ion-icon name="checkmark-sharp" className="checkmark"></ion-icon>
-          </label>
+          </div>
           <div className="add-on-info">
             <h3>{addOnH3}</h3>
             <p>{addOnInfo}</p>
