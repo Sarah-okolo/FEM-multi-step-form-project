@@ -14,6 +14,10 @@ function NavLinks(props) {
       const linkBtns = document.querySelectorAll(".round-nav-btn");
       linkBtns.forEach((btn) => btn.classList.remove('active'));
       linkBtns[btnLinkNumber-1].classList.add('active');
+      document.getElementById('go-back-btn').style.visibility = 'visible';
+    }
+    if (btnLinkNumber == 1) {
+      document.getElementById('go-back-btn').style.visibility = 'hidden';
     }
   }, [btnLinkNumber])
 

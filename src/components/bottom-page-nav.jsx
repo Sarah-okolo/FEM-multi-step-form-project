@@ -61,26 +61,29 @@ function BottomNav() {
     }
   }
 
+
   // Displays the next section in the form
   function next() {
       if(btnLinkNumber <= 4 && btnLinkNumber > 0 ) {
         setBtnLinkNumber(cur => cur + 1);
         document.getElementById(sectionLinks[btnLinkNumber]).scrollIntoView();
+        document.getElementById('go-back-btn').style.visibility = 'visible';
+
+        if(btnLinkNumber == 3) {
+          nxtBtn.current.classList.add('confirm')
+          updateNsOrConfirm("Confirm");
+        }
+        else if (btnLinkNumber == 4){
+          document.getElementById('go-back-btn').style.visibility = 'hidden';
+          btmNav.current.style.display = "none";
+          submitForm();
+        }
       }
 
       if(btnLinkNumber == 0) {
-        setBtnLinkNumber(cur => cur + 2);
-        document.getElementById(sectionLinks[btnLinkNumber+1]).scrollIntoView();
-      }
-
-      if(btnLinkNumber == 3) {
-        nxtBtn.current.classList.add('confirm')
-        updateNsOrConfirm("Confirm");
-      }
-
-      if (btnLinkNumber == 4){
-        btmNav.current.style.display = "none";
-        submitForm();
+        // setBtnLinkNumber(cur => cur + 2);
+        document.getElementById(sectionLinks[btnLinkNumber]).scrollIntoView();
+        document.getElementById('go-back-btn').style.visibility = 'hidden';
       }
   }
 
@@ -88,9 +91,9 @@ function BottomNav() {
   function back() {
     if(btnLinkNumber > 0) {
       setBtnLinkNumber(cur => cur - 1);
-      // checks to ensure btnLinkNumber is not set to a negative number.
-      if (btnLinkNumber - 2 >= 0) {
-        document.getElementById(sectionLinks[btnLinkNumber - 2]).scrollIntoView();
+      document.getElementById(sectionLinks[btnLinkNumber-2]).scrollIntoView();
+      if(btnLinkNumber == 2) {
+        document.getElementById('go-back-btn').style.visibility = 'hidden';
       }
     }
   };
