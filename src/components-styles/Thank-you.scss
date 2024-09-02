@@ -3,8 +3,7 @@
 #thank-you {
     @include content-section-child;
 
-    display: grid;
-    place-items: center;
+    margin-top: 55px;
   }
 
 #wrapper {
@@ -13,4 +12,17 @@
     gap: 15px;
     padding: 15px;
     text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  #thank-you {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .confirmed-icon {
+    width: 55px;
+    object-fit: contain;
+    aspect-ratio: 1;
+  }
 }

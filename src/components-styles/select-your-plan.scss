@@ -2,7 +2,6 @@
 
 #select-your-plan {
   @include content-section-child;
-  // display: none;
 }
 
 #plans-container {
@@ -14,7 +13,6 @@
   border-radius: $bd-radius;
   padding: 15px 10px;
   width: 30%;
-  // height: 130px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -61,8 +59,8 @@ div {
 
 #month-year-toggle-btn {
   position: relative;
-  width: 30px;
-  height: 15px;
+  width: 25px;
+  height: 12.5px;
   background-color: $Marine-blue;
   border-radius: 20px;
   transition: 1s;
@@ -76,8 +74,8 @@ div {
   position: absolute;
   top: 0;
   left: 0;
-  height: 15px;
-  width: 15px;
+  width: 50%;
+  aspect-ratio: 1;
   background-color: $White;
   border-radius: 50%;
   transform: scale(0.7) translate(0%);
@@ -103,4 +101,13 @@ div {
     justify-content: flex-start;
     padding: 10px;
   }
+
+  .months-free-txt {
+    font-size: 8px;
+  }
+
+  #month-year-select {
+    padding: 10px 45px;
+  }
+  
 }

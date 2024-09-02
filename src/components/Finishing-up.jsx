@@ -42,21 +42,21 @@ function FinishingUp() {
                 Change
               </a>
             </div>
-            <span className="amounts selected-plan-price">{selectedPlanPrice}</span>
+            <span className="selected-plan-price">{selectedPlanPrice}</span>
           </div>
 
           {/* Renders the list of user selected Add ons. */}
           {selectedAddOns.map((item, index) => (
             <div key={index} className="flex extra-prices">
               <p>{item.querySelector("h3").innerText}</p>
-              <span className="amounts online-service-price">{item.children[1].innerText}</span>
+              <span className="selected-addon-price">{item.children[1].innerText}</span>
             </div>
           ))}
         </div>
 
         <div className="flex total-amount">
           <p>
-            Total (per <span id="mo-yr">month</span>)
+            Total (per <span id="mo-yr">{isMonthOrYear == "mo" ? "year" : "month"}</span>)
           </p>
           <span id="total-selected-plan-amount">{`+$${totalPrice}/${isMonthOrYear == "mo" ? "yr" : "mo"}`}</span>
         </div>

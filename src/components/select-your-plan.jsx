@@ -64,9 +64,9 @@ function SelectYourPlan() {
         </div>
        
         <div id='month-year-select'>
-          <p>Monthly</p>
+          <p className='payment-time-frame' style={isMonthOrYear == "mo" ? {color: 'hsl(231, 11%, 63%)'} : {color: 'hsl(213, 96%, 18%)'}}>Monthly</p>
           <div id="month-year-toggle-btn" onClick={toggleMonthYear}><span className='white-slide' ref={slider}></span></div>
-          <p>Yearly</p>
+          <p className='payment-time-frame' style={isMonthOrYear == "mo" ? {color: 'hsl(213, 96%, 18%)'} : {color: 'hsl(231, 11%, 63%)'}}>Yearly</p>
         </div>
       </div>
     </>

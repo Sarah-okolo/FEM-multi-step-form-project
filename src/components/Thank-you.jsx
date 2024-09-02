@@ -5,7 +5,7 @@ function ThankYou() {
   return (
     <div id="thank-you">
       <div id="wrapper">
-        <img src="/images/icon-thank-you.svg" alt="checkmark icon" />
+        <img src="/images/icon-thank-you.svg" alt="checkmark icon" className="confirmed-icon" />
         <h2>Thank you!</h2>
         <p>
           Thanks for confirming your subscription! We hope you have fun using

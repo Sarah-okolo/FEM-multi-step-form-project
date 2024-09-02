@@ -2,7 +2,6 @@
 
 #finishing-up {
   @include content-section-child;
-  // display: none;
 }
 
 #selected-plan-price-container {
@@ -56,4 +55,11 @@
 #total-selected-plan-amount {
     color: $Purplish-blue;
     font-weight: 900;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 450px) {
+    #total-selected-plan-amount {
+        font-size: 1em;
+    }
 }

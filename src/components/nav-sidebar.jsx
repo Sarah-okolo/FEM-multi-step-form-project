@@ -11,8 +11,6 @@ function NavSidebar() {
           <NavLinks stepNumber = {2} stepName = "SELECT PLAN" destination = '#select-your-plan' />
           <NavLinks stepNumber = {3} stepName = "ADD-ONS" destination = '#pick-add-ons' />
           <NavLinks stepNumber = {4} stepName = "SUMMARY" destination = '#finishing-up' />
-
-          {/* <div className="progress-line"></div> */}
         </div>
       </nav>
     </>

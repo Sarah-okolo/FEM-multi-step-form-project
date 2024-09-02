@@ -28,7 +28,6 @@ body {
   box-shadow: $bx-shadow;
   display: flex;
   justify-content: space-between;
-  // background-color: red;
 }
 
 #main-section {
@@ -47,8 +46,10 @@ body {
   background-color: $White;
   color: $Marine-blue;
   margin: 15px;
-  overflow-y: hidden;
-  transition: 1s;
+
+  .payment-time-frame {
+    font-weight: 600;
+  }
 }
 
 #content-section::-webkit-scrollbar {
@@ -79,41 +80,54 @@ body {
 
   #root {
     justify-content: center;
-    // background-color: red;
   }
 
   #form-card {
     background-color: inherit;
     box-shadow: none;
     flex-direction: column;
-    // min-height: 100dvh;
-    min-height: calc(var(--vh, 1vh) * 100);
+    min-height: 100dvh;
     width: 100vw;
     margin: 0;
     padding: 0;
   }
 
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
   #main-section {
     width: 100%;
-    // min-height: 100px;
-    min-height: calc(var(--vh, 1vh) * 80);
+    min-height: 80%;
     padding: 0;
-    background-color: green;
+    position: relative;
   }
 
   #content-section {
     position: relative;
     top: -45px;
     width: 90%;
-    min-height: 80%;
     margin: 0 auto;
-    overflow: hidden;
     z-index: 5;
     padding: 0px 20px;
-    box-shadow: $bx-shadow;
+    box-shadow: 0px 9px 20px -10px rgba(128, 128, 128, 0.541);
     border-radius: 10px;
 
-    // background-color: red;
+    p {
+      font-size: .7em;
+    }
+
+    .selected-plan-price {
+      font-size: 10px;
+    }
+
+    .selected-addon-price {
+        font-size: 9px;
+    }
   }
 
   .attribution {
@@ -127,5 +141,4 @@ body {
     color: #213547;
     background-color: #ffffff;
   }
-
 }

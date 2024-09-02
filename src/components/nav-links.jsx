@@ -28,14 +28,12 @@ function NavLinks(props) {
     setBtnLinkNumber(Number(linksRef.current.innerText))
   }
 
-  // CHECK IF THE BOTTOM NAV BAR IS DISPLAYED OR NOT ONCLICK OF THE LINK BTNS. IF IT IS, DO NOTHING, ELSE DISPLAY IT
-
   return (
     <>
       <div className='link-wrapper'>
         <a href={destination} ref={linksRef} className="round-nav-btn" onClick={setActive}>{stepNumber}</a>
         <p className="what-section">
-          <span className='step-faded-txt'>Step {stepNumber}</span><br/>{stepName}
+          <span className='step-faded-txt'>Step {stepNumber}</span><br/>{stepName }
         </p>
       </div>
     </>

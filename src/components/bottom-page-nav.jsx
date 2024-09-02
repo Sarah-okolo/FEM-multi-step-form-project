@@ -24,6 +24,14 @@ function BottomNav() {
       nxtBtn.current.classList.add('confirm');
       updateNsOrConfirm("Confirm");
     }
+
+    // Hide all the sections
+    sectionLinks.forEach((section) => {
+      document.getElementById(section).style.display='none';
+    });
+
+    // Display only the corresponding section of the current step.
+    document.getElementById(sectionLinks[btnLinkNumber-1]).style.display="block"
   }, [btnLinkNumber])
 
   // VALIDATES AND SUBMITS FORM DATA

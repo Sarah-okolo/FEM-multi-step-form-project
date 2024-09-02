@@ -2,7 +2,6 @@
 
 #personal-info {
   @include content-section-child;
-  // display: none;
 }
 
 #personal-info-form {
@@ -38,4 +37,15 @@ label {
   color: $Strawberry-red;
   display: none;
   font-size: 9px
+}
+
+
+@media screen and (max-width: 450px) {
+  label {
+    font-size: 8.7px;
+  }
+.required {
+  font-size: 8px
+}
+
 }
