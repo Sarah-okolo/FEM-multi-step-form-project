@@ -9,6 +9,17 @@ import { MyContextsProvider } from "./contexts";
 
 
 function App() {
+  function setFullHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Call the function initially
+setFullHeight();
+
+// Recalculate the height on window resize (optional, depending on your needs)
+window.addEventListener('resize', setFullHeight);
+
   return (
     <>
       <div id="form-card">

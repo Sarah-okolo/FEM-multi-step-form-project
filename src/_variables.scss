@@ -49,7 +49,7 @@ $p-margin: 5px 0 25px;
   background-color: $color;
   cursor: pointer;
   width: 28px;
-  height: 28px;
+  aspect-ratio: 1;
   border-radius: 50%;
   border: 1px solid $White;
   font-size: .8em;
