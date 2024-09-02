@@ -7,6 +7,8 @@
 body {
   background-color: $bg-color;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 #root {
@@ -26,6 +28,7 @@ body {
   box-shadow: $bx-shadow;
   display: flex;
   justify-content: space-between;
+  // background-color: red;
 }
 
 #main-section {
@@ -40,14 +43,12 @@ body {
 
 #content-section {
   width: 100%;
-  height: 85%;
   border-radius: $bd-radius;
   background-color: $White;
   color: $Marine-blue;
   margin: 15px;
   overflow-y: hidden;
   transition: 1s;
-  scroll-behavior: smooth;
 }
 
 #content-section::-webkit-scrollbar {
@@ -55,7 +56,15 @@ body {
 }
 
 .attribution {
+  position: absolute;
+  bottom: 0;
+  padding: 30px 10px 5px;
+  color: $Cool-gray;
   font-size: 11px;
+}
+
+.attribution > a:hover {
+  color: $Marine-blue;
 }
 
 .display {
@@ -65,51 +74,54 @@ body {
 //mobile screens
 @media screen and (max-width: 450px) {
   body{
-      margin: 0;
+    width: 100vw;  
+  }
+
+  #root {
+    justify-content: center;
+    // background-color: red;
   }
 
   #form-card {
     background-color: inherit;
     box-shadow: none;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    margin: 0;
     padding: 0;
   }
 
   #main-section {
-    border-radius: 0;
     width: 100%;
-    height: 70%;
+    max-height: 100%;
     padding: 0;
   }
 
   #content-section {
     position: relative;
-    top: -60px;
+    top: -40px;
     width: 90%;
-    height: auto;
     margin: 0 auto;
-    // overflow: visible;
+    overflow: hidden;
     z-index: 5;
-    padding: 20px;
+    padding: 0px 20px;
     box-shadow: $bx-shadow;
+    border-radius: 10px;
+
+    // background-color: red;
   }
+
+  .attribution {
+    display: none;
+  }
+
 }
 
-.attribution {
-  position: absolute;
-  bottom: 0;
-  padding: 30px 10px 5px;
-  color: $Cool-gray;
-}
-
-.attribution > a:hover {
-  color: $Marine-blue;
-}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
 }
