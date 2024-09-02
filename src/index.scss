@@ -94,7 +94,7 @@ body {
 
   #main-section {
     width: 100%;
-    max-height: 75%;
+    height: 80%;
     padding: 0;
   }
 
@@ -102,6 +102,7 @@ body {
     position: relative;
     top: -40px;
     width: 90%;
+    height: auto;
     margin: 0 auto;
     overflow: hidden;
     z-index: 5;
@@ -109,7 +110,7 @@ body {
     box-shadow: $bx-shadow;
     border-radius: 10px;
 
-    // background-color: red;
+    background-color: red;
   }
 
   .attribution {
