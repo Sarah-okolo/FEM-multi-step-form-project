@@ -23,12 +23,17 @@
   @include round-btn(transparent);
   margin-right: 10px;
   text-decoration: none;
+  color: hsl(229, 24%, 87%);
 }
 
-.active, .round-nav-btn:hover {
+.round-nav-btn:hover {
   background-color: $Light-blue;
   color: $Marine-blue;
   border: none;
+}
+
+a:visited {
+  color: hsl(229, 24%, 87%);
 }
 
 .what-section {
