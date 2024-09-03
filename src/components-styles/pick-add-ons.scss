@@ -19,7 +19,7 @@
 
   #checkbx{
     width: 15px;
-    aspect-ratio: 1;
+    height: 15px;
     border: 1px solid $Cool-gray;
     border-radius: 3px;
     cursor: pointer;
@@ -65,5 +65,6 @@
 
   #checkbx{
     width: 18px;
+    height: 18px;
   }
 }
