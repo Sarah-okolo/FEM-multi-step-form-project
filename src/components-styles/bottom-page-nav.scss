@@ -8,6 +8,9 @@
   display: flex;
   justify-content: space-between;
   background-color: white;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
 }
 
 #go-back-btn {
