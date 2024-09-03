@@ -19,7 +19,7 @@ body {
 
 #form-card {
   width: 70%;
-  max-width: 800px;
+  max-width: 1000px;
   background-color: $White;
   height:500px;
   margin: 30px;
@@ -28,6 +28,7 @@ body {
   box-shadow: $bx-shadow;
   display: flex;
   justify-content: space-between;
+  color: $White;
 }
 
 #main-section {
@@ -62,6 +63,10 @@ body {
   padding: 30px 10px 5px;
   color: $Cool-gray;
   font-size: 11px;
+}
+
+.attribution > a {
+  color: $Pastel-blue;
 }
 
 .attribution > a:hover {

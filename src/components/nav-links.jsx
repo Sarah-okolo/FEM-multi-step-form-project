@@ -15,7 +15,7 @@ function NavLinks(props) {
       // removes the active state from all the link-btns
       linkBtns.forEach((btn) => {
         btn.style.backgroundColor = 'transparent'
-        btn.style.color = 'hsl(229, 24%, 87%)';
+        btn.style.color = 'hsl(0, 0%, 100%)';
         btn.style.border = '1px solid white';
       });
       // sets the active state for only the currently clicked the link-btn
