@@ -15,7 +15,7 @@ function NavLinks(props) {
       // removes the active state from all the link-btns
       linkBtns.forEach((btn) => {
         btn.style.backgroundColor = 'transparent'
-        btn.style.color = 'hsl(0, 0%, 100%)';
+        btn.style.color = 'white';
         btn.style.border = '1px solid white';
       });
       // sets the active state for only the currently clicked the link-btn
@@ -40,7 +40,9 @@ function NavLinks(props) {
       <div className='link-wrapper'>
         <a href={destination} ref={linksRef} className="round-nav-btn" onClick={setActive}>{stepNumber}</a>
         <p className="what-section">
-          <span className='step-faded-txt'>Step {stepNumber}</span><br/>{stepName}
+          <span className='step-faded-txt'>Step {stepNumber}</span>
+          <br/>
+          <span className='step-name'>{stepName}</span>
         </p>
       </div>
     </>
