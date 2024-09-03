@@ -1,7 +1,7 @@
 # Frontend Mentor - Multi-step form solution
 ## React + Vite + SASS
 
-This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ).
 
 ## Table of contents
 
@@ -12,14 +12,13 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+
+A preview of this project's challenges and my solution.
 
 ### The challenge
 
@@ -33,87 +32,89 @@ Users should be able to:
 - Receive form validation messages if:
   - A field has been missed
   - The email address is not formatted correctly
-  - A step is submitted, but no selection has been made
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Preview of my solution in different layouts.
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+#### Desktop view
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+![Solution preview on desktop devices](./public/images/solution-preview-desktop.png)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+#### Tablet view
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Solution preview on tablet devices](./public/images/solution-preview-tablet.png)
+
+#### Mobile view
+
+![Solution preview on mobile devices](./public/images/solution-preview-mobile.png)
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FEM-multi-step-form-project](https://github.com/Sarah-okolo/FEM-multi-step-form-project)
+- Live Site URL: [multi-step-form-by-sarah-okolo](https://multi-step-form-by-sarah-okolo.netlify.app/)
+
 
 ## My process
 
+In this section, I highlight the process I followed to building out my solution for this challenge.
+
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- [React JS](https://reactjs.org/) - JS library
+- [Sass and SCSS](https://sass-lang.com/) - For styles
+- [Vite](https://vitejs.dev/) - Frontend development server
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Throught this challenge, I learned a about the following useful practices, tools, techniques and framework for frontend development.
 
-To see how you can add code snippets, see below:
+#### React
 
+This is my first React project. This challenge gave me an opportunity to learn how to use the React JS framework to build webpages. The challenge presented me with enough tasks to make learn a lot about React features such as: Virtual DOM, Components, JSX, Hooks, Updater functions, Props, Event handling, Prop types, and more...
+
+#### Sass and SCSS
+
+Also my first time using Sass in a project. I have always preferred having full control over my styling rather than usng a CSS framework or library. But I also wanted to make use of cetain features which native CSS does not have, which led me to learn about how to make use of a CSS preprocessor instead, through my research I was able to publish [this article](https://www.frontendmentor.io/articles/css-preprocessors-sass-or-less-which-to-choose-JOI20I1xNL) about CSS preprocessors, and I found Sass to be the best option. I learnt about amazing Sass features such as the the indentation syntax, `@import` rule, compiling a Sass file to CSS, `@mixin` rule, Nestng, `@include` rule, Variables, Functions, conditional styling with `@if` and `@else` rule, and the **SCSS** block syntax. 
+
+#### Vite
+
+Deciding to build out my solution for this challenge with React required me to learn about how to create a React projct with the Vite development server and how to run builds for my project. While learining Vite, I was able get a very good understanding about [Hot Module Replacement (HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement).
+
+#### Techniques and Code
+
+In this section, I list out a few techniques I am proud that I got to learn about while building out this solution.
+
+- How tot create a custom checkbox:
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div role="checkbox" id="checkbx" tabIndex="0" aria-checked="false">
+  <ion-icon name="checkmark-sharp" className="checkmark"></ion-icon>
+</div>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+
+- How to extract a numbers from a string:
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function extractNumericValues(AlNmStr) {
+  const numericValues = AlNmStr.match(/\d+/g).join("");
+  return Number(numericValues);
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- How to update styles conditionally from a JS variable on toggle of a button
+```jsx
+<p className='payment-time-frame' style={isMonthOrYear == "mo" ? {color: 'hsl(231, 11%, 63%)'} : {color: 'hsl(213, 96%, 18%)'}}>Monthly</p>
+```
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+### Useful resource
 
-### Continued development
+- [React Tutorial](https://www.youtube.com/playlist?list=PLZPZq0r_RZOMQArzyI32mVndGBZ3D99XQ) - This helped me understand how to create a react application and how to make use of React State, Context, Ref, and Effect.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Sarah Okolo](https://sarah-okolo.netlify.app/)
+- Frontend Mentor - [@Sarah-okolo](https://www.frontendmentor.io/profile/Sarah-okolo)
+- Twitter - [@SahraOke](https://x.com/SahraOke)

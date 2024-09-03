@@ -12,26 +12,25 @@ function NavLinks(props) {
   useEffect(() => {
     if (btnLinkNumber <= 4 && btnLinkNumber > 0) {
       const linkBtns = document.querySelectorAll(".round-nav-btn");
-      linkBtns.forEach((btn) => btn.classList.remove('active'));
-      linkBtns[btnLinkNumber-1].classList.add('active');
-      document.getElementById('go-back-btn').style.visibility = 'visible';
+      // removes the active state from all the link-btns
+      linkBtns.forEach((btn) => {
+        btn.style.backgroundColor = 'transparent'
+        btn.style.color = 'hsl(229, 24%, 87%)';
+        btn.style.border = '1px solid white';
+      });
+      // sets the active state for only the currently clicked the link-btn
+      linkBtns[btnLinkNumber-1].style.backgroundColor = 'hsl(206, 94%, 87%)';
+      linkBtns[btnLinkNumber-1].style.color = 'hsl(213, 96%, 18%)';
+      linkBtns[btnLinkNumber-1].style.border = 'none';
+      document.getElementById('go-back-btn').style.visibility = 'visible'; // displays the go-back btn if the user is not currently on the first step
     }
     if (btnLinkNumber == 1) {
-      document.getElementById('go-back-btn').style.visibility = 'hidden';
+      document.getElementById('go-back-btn').style.visibility = 'hidden'; // hides the go-back btn if the user is currently on the first step
     }
   }, [btnLinkNumber])
 
-  // removes the active state of all section btns and sets only for the currently clicked link btn.
+  // updates the btnLinkNumber with the number text of the currently clicked link
   function setActive() {
-    document.querySelectorAll(".round-nav-btn").forEach((link) => {
-      link.style.backgroundColor = 'transparent'
-      link.style.color = 'hsl(229, 24%, 87%)';
-      link.style.border = '1px solid white';
-
-  });
-    linksRef.current.style.backgroundColor = 'hsl(206, 94%, 87%)';
-    linksRef.current.style.color = 'hsl(213, 96%, 18%)';
-    linksRef.current.style.border = 'none';
     setBtnLinkNumber(Number(linksRef.current.innerText))
   }
 
