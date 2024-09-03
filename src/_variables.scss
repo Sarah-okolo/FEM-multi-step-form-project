@@ -27,7 +27,7 @@ $content-bg-color: $White;
 $bx-shadow: 1px 1px 20px $Light-gray;
 $bd-radius: 5px;
 $small-txts: .9em;
-$p-margin: 5px 0 25px;
+$p-margin: 8px 0 27px;
 
 // @mixins consistent styles
 @mixin bg-image($url) {
@@ -60,7 +60,7 @@ $p-margin: 5px 0 25px;
 @mixin content-section-child {
   width: 100%;
   border-radius: 30px;
-  padding: 20px 0px;
+  padding: 10px 0px;
 
   p{
     color: $Cool-gray;

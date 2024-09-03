@@ -19,7 +19,7 @@
 
   #checkbx{
     width: 15px;
-    height: 15px;
+    aspect-ratio: 1;
     border: 1px solid $Cool-gray;
     border-radius: 3px;
     cursor: pointer;
@@ -61,5 +61,9 @@
 @media screen and (max-width: 450px) {
   .add-on-price {
     font-size: 12px;
+  }
+
+  #checkbx{
+    width: 18px;
   }
 }
