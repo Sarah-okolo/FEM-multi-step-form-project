@@ -46,32 +46,32 @@ a:visited {
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 950px) {
   #nav-sidebar{
-  @include bg-image("../images/bg-sidebar-mobile.svg");
-    width: 100%;
-    height: 130px;
-    border-radius: 0;
-    display: grid;
-    place-items: center;
-  }
-
-  #nav-links-container {
-    display: flex;
-    gap: 5px;
-    position: relative;
-    top: -20px;
-  }
-
-  .round-nav-btn {
-    width: 33px;
-  }
-
-  .what-section {
-    display: none;
-  }
-
-  a {
-    color: $White;
-  }
+    @include bg-image("../images/bg-sidebar-mobile.svg");
+      width: 100%;
+      height: 130px;
+      border-radius: 0;
+      display: grid;
+      place-items: center;
+    }
+  
+    #nav-links-container {
+      display: flex;
+      gap: 5px;
+      position: relative;
+      top: -20px;
+    }
+  
+    .round-nav-btn {
+      width: 33px;
+    }
+  
+    .what-section {
+      display: none;
+    }
+  
+    a {
+      color: $White;
+    }
 }

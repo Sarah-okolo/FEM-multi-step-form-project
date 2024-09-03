@@ -38,13 +38,20 @@
   opacity: 0.8;
 }
 
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 950px) {
   #bottom-nav {
     margin: 0;
-    padding: 15px 18px;
+    padding: 15px 60px;
     box-shadow: $bx-shadow;
     position: fixed;
     bottom: 0;
     left: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #bottom-nav {
+    padding: 15px 18px;
   }
 }
