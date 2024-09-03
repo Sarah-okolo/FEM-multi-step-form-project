@@ -70,25 +70,25 @@ In this section, I highlight the process I followed to building out my solution 
 
 ### What I learned
 
-Throught this challenge, I learned a about the following useful practices, tools, techniques and framework for frontend development.
+Through this challenge, I learned about the following useful practices, tools, techniques, and frameworks for front-end development.
 
 #### React
 
-This is my first React project. This challenge gave me an opportunity to learn how to use the React JS framework to build webpages. The challenge presented me with enough tasks to make learn a lot about React features such as: Virtual DOM, Components, JSX, Hooks, Updater functions, Props, Event handling, Prop types, and more...
+This is my first React project. This challenge gave me an opportunity to learn how to use the React JS framework to build webpages. The challenge presented me with enough tasks to learn a lot about React features such as Virtual DOM, Components, JSX, Hooks, Updater functions, Props, Event handling, Prop types, and more...
 
 #### Sass and SCSS
 
-Also my first time using Sass in a project. I have always preferred having full control over my styling rather than usng a CSS framework or library. But I also wanted to make use of cetain features which native CSS does not have, which led me to learn about how to make use of a CSS preprocessor instead, through my research I was able to publish [this article](https://www.frontendmentor.io/articles/css-preprocessors-sass-or-less-which-to-choose-JOI20I1xNL) about CSS preprocessors, and I found Sass to be the best option. I learnt about amazing Sass features such as the the indentation syntax, `@import` rule, compiling a Sass file to CSS, `@mixin` rule, Nestng, `@include` rule, Variables, Functions, conditional styling with `@if` and `@else` rule, and the **SCSS** block syntax. 
+It was also my first time using Sass in a project. I have always preferred having full control over my styling rather than using a CSS framework or library. But I also wanted to make use of certain features that native CSS does not have, which led me to learn about how to make use of a CSS preprocessor instead, through my research I was able to publish [this article](https://www.frontendmentor.io/articles/css-preprocessors-sass-or-less-which-to-choose-JOI20I1xNL) about CSS preprocessors, and I found Sass to be the best option. I learned about amazing Sass features such as the indentation syntax, `@import` rule, compiling a Sass file to CSS, `@mixin` rule, Nestng, `@include` rule, Variables, Functions, conditional styling with `@if` and `@else` rule, and the **SCSS** block syntax. 
 
 #### Vite
 
-Deciding to build out my solution for this challenge with React required me to learn about how to create a React projct with the Vite development server and how to run builds for my project. While learining Vite, I was able get a very good understanding about [Hot Module Replacement (HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement).
+Deciding to build out my solution for this challenge with React required me to learn about how to create a React project with the Vite development server and how to run builds for my project. While learning Vite, I was able to get a very good understanding of [Hot Module Replacement (HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement).
 
 #### Techniques and Code
 
 In this section, I list out a few techniques I am proud that I got to learn about while building out this solution.
 
-- How tot create a custom checkbox:
+- How to create a custom checkbox:
 ```html
 <div role="checkbox" id="checkbx" tabIndex="0" aria-checked="false">
   <ion-icon name="checkmark-sharp" className="checkmark"></ion-icon>
@@ -103,7 +103,7 @@ function extractNumericValues(AlNmStr) {
 }
 ```
 
-- How to update styles conditionally from a JS variable on toggle of a button
+- How to update styles conditionally from a JS variable
 ```jsx
 <p className='payment-time-frame' style={isMonthOrYear == "mo" ? {color: 'hsl(231, 11%, 63%)'} : {color: 'hsl(213, 96%, 18%)'}}>Monthly</p>
 ```
