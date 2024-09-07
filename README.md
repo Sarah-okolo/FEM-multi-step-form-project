@@ -115,6 +115,6 @@ function extractNumericValues(AlNmStr) {
 
 ## Author
 
-- Website - [Sarah Okolo](https://sarah-okolo.netlify.app/)
+- Website - [Sarah Okolo](https://sara-okolo.netlify.app/)
 - Frontend Mentor - [@Sarah-okolo](https://www.frontendmentor.io/profile/Sarah-okolo)
 - Twitter - [@SahraOke](https://x.com/SahraOke)
